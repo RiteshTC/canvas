@@ -1,18 +1,40 @@
 {
-  "name": "salesforcecanvasframeworksdk",
+  "name": "sample-canvas-app",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Frank's Canvas sample app",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "test": "./node_modules/.bin/mocha --exit"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frankcaron/sample-canvas-app.git"
+  },
+  "engines": {
+    "node": "11.1.0"
+  },
+  "author": "frankcaron",
   "license": "ISC",
-  "description": "",
+  "bugs": {
+    "url": "https://github.com/frankcaron/sample-canvas-app/issues"
+  },
+  "homepage": "https://github.com/frankcaron/sample-canvas-app#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "request": "^2.88.0"
+  },
   "dependencies": {
-    "body-parser": "^1.20.3",
-    "express": "^4.21.2",
-    "jsonwebtoken": "^9.0.2"
+    "@salesforce/canvas-js-sdk": "^1.41.0",
+    "aws-sdk": "2.x",
+    "base64url": "^3.0.1",
+    "body-parser": "^1.18.3",
+    "chai-http": "^4.2.1",
+    "crypto-js": "^3.1.6",
+    "ejs": "^2.5",
+    "express": "^4.16.4",
+    "pg": "^7.8.1",
+    "supertest": "^4.0.2"
   }
 }
