@@ -1,44 +1,47 @@
 <!-- Page -->
 <html>
-    <head>
-        <style> 
-            body {
-                margin: 0px;
-                padding: 0px;
-            }
-            img {
-                width: 100%;
-            }
-            #full-banner {
-                width: 100%;
-                padding: 5px;
-                margin: 0px;
-                height: 16px;
-                text-align: center;
-                font-size: 12px;
-                font-weight: bolder;
-                background-color: #ffaa99;
-                font-family: Arial;
-                vertical-align: middle;
-            }
-            #full-banner p {
-                padding: 0px;
-                margin: auto;
-            }
-        </style>
-        <script type="text/javascript" src="https://your-salesforce-subdomain.lightning.force.com/canvas/sdk/js/45.0/canvas-all.js"></script>
 
-    </head>
-    <body>
+<head>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
 
-        <% 
-            var user = "No user";
-            if (context != "") { 
-                var user = context['context']['user']['userName'];
-            }
-        %>
+        img {
+            width: 100%;
+        }
 
-        <div id="full-banner"><p>You're connected to this system as <%= user %>.</p></div>
+        #full-banner {
+            width: 100%;
+            padding: 5px;
+            margin: 0px;
+            height: 16px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: bolder;
+            background-color: #ffaa99;
+            font-family: Arial;
+            vertical-align: middle;
+        }
+
+        #full-banner p {
+            padding: 0px;
+            margin: auto;
+        }
+    </style>
+    <script type="text/javascript"
+        src="https://randstad-f4-dev-ed.develop.lightning.force.com/canvas/sdk/js/45.0/canvas-all.js"></script>
+
+</head>
+
+<body>
+    <p>Updated...</p>
+    <% var user="No user" ; if (context !="" ) { var user=context['context']['user']['userName']; } %>
+
+        <div id="full-banner">
+            <p>You're connected to this system as <%= user %>.</p>
+        </div>
 
         <img id="ctx" src="<%= url %>" />
 
@@ -46,5 +49,6 @@
             console.log("SFDC Raw Context: <%= context %>");
         </script>
 
-    </body>
+</body>
+
 </html>
