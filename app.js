@@ -28,6 +28,7 @@ app.get('/', function (req, res) {
 
 //Return for the fixed page 
 app.get('/canvas-demo/', function (req, res) {
+  console.log("This is being executed.....");
   res.render('index', { context: "", url: process.env.IMAGE_URL });
 });
 
