@@ -33,6 +33,10 @@ app.get('/canvas-demo/', function (req, res) {
 
 //Signed request for canvas app
 app.post('/canvas-demo/', function (req, res) {
+
+  console.log("POST Request received...");
+  console.log(req.body.signed_request);
+
   var signed_req = req.body.signed_request;
   var hashedContext = signed_req.split('.')[0];
   var context = signed_req.split('.')[1];
@@ -60,7 +64,7 @@ app.post('/canvas-demo/', function (req, res) {
 
 //Launch listening server on port Heroku-capable port
 app.listen(port, function () {
-  console.log('Server running....')
+  console.log('Server running again....')
 })
 
 //Export for tests
